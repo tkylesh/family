@@ -1,7 +1,7 @@
 "use strict";
 var FbAPI = (function(oldFirebase){
 
-	oldFirebase.getTodos = function(apiKeys, uid){
+	oldFirebase.getMembers = function(apiKeys, uid){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'GET',
@@ -19,7 +19,7 @@ var FbAPI = (function(oldFirebase){
 			});
 		});
 	};
-	oldFirebase.addTodo = function(apiKeys, newItem){
+	oldFirebase.addMember = function(apiKeys, newItem){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'POST',
@@ -34,7 +34,7 @@ var FbAPI = (function(oldFirebase){
 			});
 		});
 	};
-	oldFirebase.deleteTodo = function(apiKeys, itemId){
+	oldFirebase.deleteMember = function(apiKeys, itemId){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'DELETE',
@@ -48,7 +48,7 @@ var FbAPI = (function(oldFirebase){
 		});
 	};
 
-	oldFirebase.editTodo = function(apiKeys, itemId, editedItem){
+	oldFirebase.editMember = function(apiKeys, itemId, editedItem){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'PUT',
