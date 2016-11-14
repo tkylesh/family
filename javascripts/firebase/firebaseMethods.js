@@ -23,7 +23,7 @@ var FbAPI = (function(oldFirebase){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'POST',
-				url:`${apiKeys.databaseURL}/items.json`,
+				url:`${apiKeys.databaseURL}/family.json`,
 				data: JSON.stringify(newItem),
 				dataType: 'json'
 			}).then((response)=>{
@@ -38,7 +38,7 @@ var FbAPI = (function(oldFirebase){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'DELETE',
-				url:`${apiKeys.databaseURL}/items/${itemId}.json`,
+				url:`${apiKeys.databaseURL}/family/${itemId}.json`,
 			}).then((response)=>{
 				console.log("response from delete: ",response);
 				resolve(response);
@@ -52,7 +52,7 @@ var FbAPI = (function(oldFirebase){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'PUT',
-				url:`${apiKeys.databaseURL}/items/${itemId}.json`,
+				url:`${apiKeys.databaseURL}/family/${itemId}.json`,
 				data: JSON.stringify(editedItem),
 				dataType: 'json'
 			}).then((response)=>{
