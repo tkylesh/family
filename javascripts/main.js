@@ -24,7 +24,14 @@ $(document).ready(()=>{
 	    // myFamily.add(apiKeys, newItem).then(function(response){
 	    // 	console.log("response from adding member: ", response)
 	    // });
+    });
 
+    $('#listMembers').on('click', '.delete', function(){
+    	let memberId = $(this).data("fbid");
+    	console.log("memberId to delete: ", memberId);
+    	myFamily.remove(apiKeys, memberId).then(function(){
+    		myFamily.list(apiKeys);
+    	});
     });
 
     

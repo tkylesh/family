@@ -9,9 +9,9 @@ function listMembers(apiKeys){
 		members.forEach(function(member){
 			DOM += '<div class="panel panel-default">';
 			  DOM +='<div class="panel-body">';
-			  DOM += `<div class="col-xs-3 col-xs-offset-3">${member.name}</div>`;
-              DOM += `<div class="col-xs-1">${member.age}</div>`;
-              DOM += `<div class="col-xs-1">${member.gender}</div>`;
+			  DOM += `<div class="col-xs-3 col-xs-offset-1">${member.name}</div>`;
+              DOM += `<div class="col-xs-2">${member.age}</div>`;
+              DOM += `<div class="col-xs-2">${member.gender}</div>`;
               DOM += `<div class="col-xs-3">${member.skills.toString()}</div>`;
               DOM += `<div><button class="btn btn-danger delete" data-fbid="${member.id}">Delete</button></div>`;
               DOM += "</div>";
