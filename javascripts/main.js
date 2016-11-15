@@ -3,7 +3,6 @@
 let myFamily = require("./family");
 
 let apiKeys = {};
-let uid = "";
 
 
 
