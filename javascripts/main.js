@@ -6,7 +6,7 @@ myFamily.listMembers();
 
 
 $(document).ready(()=>{
-    console.log('jquery is ready');
+    
     FbAPI.firebaseCredentials().then(function(keys){
       console.log("keys", keys);
       apiKeys = keys;
