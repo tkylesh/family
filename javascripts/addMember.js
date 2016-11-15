@@ -4,7 +4,7 @@
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'POST',
-				url:`${apiKeys.databaseURL}/family.json`,
+				url:`${apiKeys.databaseURL}/family.json?`,
 				data: JSON.stringify(newItem),
 				dataType: 'json'
 			}).then((response)=>{

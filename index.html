@@ -6,8 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/styles/main.css"/>
 </head>
-<body>
-	<h1>Family</h1>
+<body class="container">
+	<div class="row">
+		<div class="col-xs-3 col-xs-offset-5 text-center">
+			<h1>Family</h1>	
+		</div>
+		<div class="col-xs-3">
+			<button class="btn btn-success col-xs-6">add <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+		</div>
+	</div>
+
 	<div id='listMembers'></div>
 	
 <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>

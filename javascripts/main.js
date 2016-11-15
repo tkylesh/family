@@ -5,6 +5,12 @@ let myFamily = require("./family");
 let apiKeys = {};
 
 
+let newItem = {
+	"name":"taylor s",
+	"age":"26",
+	"gender":"Male",
+	"skills":["coding","drinking water"]
+};
 
 
 $(document).ready(()=>{
@@ -14,9 +20,15 @@ $(document).ready(()=>{
       apiKeys = keys;
       firebase.initializeApp(apiKeys);
       // putTodoInDOM();
-      myFamily.list(apiKeys).then(function(response){
-      	console.log("list of family members: ", response);
-      });
+	    myFamily.list(apiKeys);
+	    // myFamily.add(apiKeys, newItem).then(function(response){
+	    // 	console.log("response from adding member: ", response)
+	    // });
+
     });
+
+    
+    
+
 
 });
