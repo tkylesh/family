@@ -1,14 +1,24 @@
 "use strict";
 
-let apiKeys = {};
-let uid = "";
+	function listMembers apiKeys, uid() {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				method: 'GET',
+				url:`${apiKeys.databaseURL}/items.json?orderBy="uid"&equalTo="${uid}"`
+			}).then((response)=>{
+				//turn the object response into an array with this code
+				let items = [];
+				Object.keys(response).forEach(function(key){
+					response[key].id = key;
+					items.push(response[key]);
+				});
+				resolve(items);
+			}, (error)=>{
+				reject(error);
+			});
+		});
+	};
 
-function listMembers () {
-	FbAPI.getMembers(apiKeys, uid).then(function(members){
-		console.log("members from FB", members);
-		$('#listMembers').html('');
-	});
-}
 
 
 module.exports = listMembers;
