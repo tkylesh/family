@@ -2,26 +2,41 @@
 
   "family": 
     {
-      "name": "First Last",
-      "uid":"tLlGjzDQSuP0Z1eZ7sEXGH9epVx1",
-      "age": 4,
-      "gender": "male",
-      "skills": [
-        "burping",
-        "farting",
-        "inappropriate shouting",
-        "tantrums"
-      ]
-    },
-	"users":{
-		"user1":{
-			"username": "a",
-			"uid": "tLlGjzDQSuP0Z1eZ7sEXGH9epVx1"
-		},
-		"user2":{
-			"username": "tkylesh",
-			"uid": "8xhAS3XIsoZfJq01yeJPXEWSwfG2"
-
-		}
-	}
+      "member0":
+        {
+        "name": "First Last",
+        "age": 4,
+        "gender": "male",
+        "skills": [
+          "burping",
+          "farting",
+          "inappropriate shouting",
+          "tantrums"
+        ]
+      },
+      "member1":
+        {
+        "name": "First ast",
+        "age": 4,
+        "gender": "male",
+        "skills": [
+          "burping",
+          "farting",
+          "inappropriate shouting",
+          "tantrums"
+        ]
+      },
+      "member2":
+        {
+        "name": "First L",
+        "age": 4,
+        "gender": "male",
+        "skills": [
+          "burping",
+          "farting",
+          "inappropriate shouting",
+          "tantrums"
+        ]
+      }
+    }
 }

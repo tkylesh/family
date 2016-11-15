@@ -4,16 +4,17 @@
   The functionality for adding, subtracting, multiplying, and dividing
   are broken out into individual modules. Require those into this module.
  */
-const addMember = require("./addMember");
-const deleteMember = require("./deleteMember");
-const listMembers = require("./listMembers");
+ const cred = require("./firebase");
+const add = require("./addMember");
+const remove = require("./deleteMember");
+const list = require("./listMembers");
 
 /* 
   Now, construct an object that contains a key/value pair for each
   of those modules that we pulled into this one
 */
 let family = {
-  addMember, deleteMember, listMembers
+  cred, add, remove, list
 };
 
 /*

@@ -1,10 +1,10 @@
 "use strict";
 
-	function listMembers apiKeys, uid() {
+	function listMembers(apiKeys) {
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'GET',
-				url:`${apiKeys.databaseURL}/items.json?orderBy="uid"&equalTo="${uid}"`
+				url:`${apiKeys.databaseURL}/family.json`
 			}).then((response)=>{
 				//turn the object response into an array with this code
 				let items = [];

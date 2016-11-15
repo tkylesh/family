@@ -16,4 +16,4 @@
 		});
 	};
 
-	module.exports = addMembers;
+	module.exports = addMember;

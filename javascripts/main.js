@@ -2,16 +2,22 @@
 
 let myFamily = require("./family");
 
-myFamily.listMembers();
+let apiKeys = {};
+let uid = "";
+
+
 
 
 $(document).ready(()=>{
     
-    FbAPI.firebaseCredentials().then(function(keys){
+    myFamily.cred().then(function(keys){
       console.log("keys", keys);
       apiKeys = keys;
       firebase.initializeApp(apiKeys);
       // putTodoInDOM();
+      myFamily.list(apiKeys).then(function(response){
+      	console.log("list of family members: ", response);
+      });
     });
 
 });

@@ -1,9 +1,8 @@
 "use strict";
 
-var FbAPI = (function(){
-	return{
-		firebaseCredentials: function(){
-			return new Promise((resolve, reject) =>{
+
+	function firebaseCredentials(){
+		return new Promise((resolve, reject) =>{
 				$.ajax({
 					method:'GET',
 					url:`apiKeys.json`
@@ -12,7 +11,7 @@ var FbAPI = (function(){
 				}, (error)=>{
 					reject(error);
 				});
-			});
-		}
+		});
 	};
-})();
+
+module.exports = firebaseCredentials;

@@ -1,10 +1,10 @@
 "use strict";
 
-	function deleteMember(apiKeys, itemId){
+	function deleteMember(apiKeys, memberId){
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				method: 'DELETE',
-				url:`${apiKeys.databaseURL}/family/${itemId}.json`,
+				url:`${apiKeys.databaseURL}/family/${memberId}.json`,
 			}).then((response)=>{
 				console.log("response from delete: ",response);
 				resolve(response);
@@ -14,4 +14,4 @@
 		});
 	};
 
-	module.exports = deleteMembers;
+	module.exports = deleteMember;
