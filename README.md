@@ -3,8 +3,29 @@
 ### Run Project
 1) git clone project to your local machine
 ```bash
-git clone 
+git clone https://github.com/tkylesh/family.git
 ```
+2) change directory to the lib folder
+```bash
+cd family/lib
+```
+3) run 'npm install' & 'bower install'
+```bash
+npm install
+```
+/////////////
+```bash
+bower install
+```
+4) navigate back to the root folder of 'family'
+```bash
+cd ..
+```
+5) start up 'http-server'
+```bash
+http-server -p 9999
+```
+
 
 ## Requirements
 
