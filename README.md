@@ -1,6 +1,5 @@
-## Setup
 
-### Run Project
+## Run Project
 1) git clone project to your local machine
 ```bash
 git clone https://github.com/tkylesh/family.git
