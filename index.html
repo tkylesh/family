@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Family</title>
+	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/styles/main.css"/>
+</head>
+<body class="container">
+	<div class="row">
+		<div class="col-xs-3 col-xs-offset-5 text-center">
+			<h1>Family</h1>	
+		</div>
+		<div class="col-xs-3">
+			<button class="btn btn-success col-xs-6" data-toggle="modal" data-target="#addMemberModal">add <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div id="addMemberModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">ADD MEMBER</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<form>
+		      	<fieldset class="form-group row">
+		      		<legend class="col-form-legend col-sm-12">Name: </legend>
+		      		<div class="col-sm-10">
+		        		<input type="text" id="inputName" class="form-control" placeholder="First Last" required/>
+		        	</div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		      		<legend class="col-form-legend col-sm-12">Age: </legend>
+		      		<div class="col-sm-10">
+		        		<input type="text" id="inputAge" class="form-control" placeholder="" required/>
+		        	</div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		        	<legend class="col-form-legend col-sm-12">Gender: </legend>
+		        	<div class="col-sm-10">
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="genderRadios" value="female" checked>
+				           Female
+				          </label>
+				        </div>
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="genderRadios" value="male">
+				           Male
+				          </label>
+				        </div>
+				    </div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		      		<legend class="col-form-legend col-sm-10">Skills: </legend>
+		      		<div class="col-sm-10">
+		        		<textarea type="text" id="inputSkills" class="form-control" placeholder="skill, skill, skill..." required></textarea>
+		        	</div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		        	<div class="col-sm-9 col-sm-offset-3">
+		        		<button type="button" class="btn btn-lg btn-success" id="addSubmit">Add Family Member</button>
+		        	</div>
+		        </fieldset>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!--list of family members-->
+	<div id='listMembers'></div>
+	
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="dist/app.js"></script>
+</body>
+</html>
