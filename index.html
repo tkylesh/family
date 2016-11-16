@@ -12,22 +12,63 @@
 			<h1>Family</h1>	
 		</div>
 		<div class="col-xs-3">
-			<button class="btn btn-success col-xs-6" data-toggle="modal" data-target="#myModal">add <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+			<button class="btn btn-success col-xs-6" data-toggle="modal" data-target="#addMemberModal">add <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
 		</div>
 	</div>
 
 	<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
+	<div id="addMemberModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
 	    <!-- Modal content-->
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Modal Header</h4>
+	        <h4 class="modal-title">ADD MEMBER</h4>
 	      </div>
 	      <div class="modal-body">
-	        <p>Some text in the modal.</p>
+	      	<form>
+		      	<fieldset class="form-group row">
+		      		<legend class="col-form-legend col-sm-12">Name: </legend>
+		      		<div class="col-sm-10">
+		        		<input type="text" id="inputName" class="form-control" placeholder="First Last" required/>
+		        	</div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		      		<legend class="col-form-legend col-sm-12">Age: </legend>
+		      		<div class="col-sm-10">
+		        		<input type="text" id="inputAge" class="form-control" placeholder="First Last" required/>
+		        	</div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		        	<legend class="col-form-legend col-sm-12">Gender: </legend>
+		        	<div class="col-sm-10">
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="genderRadios" value="female" checked>
+				           Female
+				          </label>
+				        </div>
+				        <div class="form-check">
+				          <label class="form-check-label">
+				            <input class="form-check-input" type="radio" name="genderRadios" value="male">
+				           Male
+				          </label>
+				        </div>
+				    </div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		      		<legend class="col-form-legend col-sm-10">Skills: </legend>
+		      		<div class="col-sm-10">
+		        		<textarea type="text" id="inputSkills" class="form-control" placeholder="skill, skill, skill..." required></textarea>
+		        	</div>
+		        </fieldset>
+		        <fieldset class="form-group row">
+		        	<div class="col-sm-9 col-sm-offset-3">
+		        		<button class="btn btn-lg btn-success" id="add">Add Family Member</button>
+		        	</div>
+		        </fieldset>
+	        </form>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
