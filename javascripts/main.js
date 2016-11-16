@@ -5,25 +5,13 @@ let myFamily = require("./family");
 let apiKeys = {};
 
 
-let newItem = {
-	"name":"taylor s",
-	"age":"26",
-	"gender":"Male",
-	"skills":["coding","drinking water"]
-};
-
-
 $(document).ready(()=>{
     
     myFamily.cred().then(function(keys){
       console.log("keys", keys);
       apiKeys = keys;
       firebase.initializeApp(apiKeys);
-      // putTodoInDOM();
 	    myFamily.list(apiKeys);
-	    // myFamily.add(apiKeys, newItem).then(function(response){
-	    // 	console.log("response from adding member: ", response)
-	    // });
     });
 
     $('#listMembers').on('click', '.delete', function(){
@@ -34,8 +22,25 @@ $(document).ready(()=>{
     	});
     });
 
-    
-    
+    $('#addMemberModal').on('click', '#addSubmit', function(){
+      console.log('addSubmit Btn clicked');
+      let newItem = {
+        "name": $('#inputName').val(),
+        "age": $('#inputAge').val(),
+        "gender": $('.form-check-input').val(),
+        "skills": $("#inputSkills").val().split(",")
+      };
 
-
+      for (let key in newItem) {
+        if (newItem[key] === "") {
+          window.alert("Please fill all fields!");
+          return;
+        }
+      }
+      
+      myFamily.add(apiKeys, newItem).then(function(){
+        myFamily.list(apiKeys);
+        $('#addMemberModal').modal('toggle');
+      });
+    });
 });
