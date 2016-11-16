@@ -26,6 +26,8 @@ cd ..
 http-server -p 9999
 ```
 
+6)then open your browser and navigate to http://localhost:9999 
+
 
 ## Requirements
 
