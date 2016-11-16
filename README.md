@@ -1,9 +1,9 @@
 ## Setup
 
-### Create Exercise Directory
-
+### Run Project
+1) git clone project to your local machine
 ```bash
-mkdir -p ~/workspace/exercises/rich-browser/family && cd $_
+git clone 
 ```
 
 ## Requirements
